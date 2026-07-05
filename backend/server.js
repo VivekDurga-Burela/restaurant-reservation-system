@@ -72,11 +72,8 @@ async function seedUsers() {
   const User = require('./models/User');
   const count = await User.countDocuments();
   if (count === 0) {
-    const users = [
-      { name: 'Demo Customer', email: 'customer@demo.com', password: 'password123', role: 'customer' },
-      { name: 'Demo Admin', email: 'admin@demo.com', password: 'password123', role: 'admin' },
-    ];
-    await User.insertMany(users);
+    await User.create({ name: 'Demo Customer', email: 'customer@demo.com', password: 'password123', role: 'customer' });
+    await User.create({ name: 'Demo Admin', email: 'admin@demo.com', password: 'password123', role: 'admin' });
     console.log('Demo users seeded successfully');
   }
 }
