@@ -271,3 +271,4 @@ The application features a dark luxury restaurant theme with:
 - Configuration UI for time slots
 - Payment integration
 - Customer reviews and ratings
+ 
